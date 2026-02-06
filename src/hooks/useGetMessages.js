@@ -10,7 +10,7 @@ const useGetMessages = () => {
 		const getMessages = async () => {
 			setLoading(true);
 			try {
-				const res = await fetch(`https://chat-app-backend-sand-three.vercel.app/api/messages/${selectedConversation._id}`,{
+				const res = await fetch(`https://chat-app-backend-two-liard.vercel.app/api/messages/${selectedConversation._id}`,{
 					method:"GET",
 					credentials:"include",
 				});
