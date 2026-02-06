@@ -9,7 +9,7 @@ const useGetConversations = () => {
 		const getConversations = async () => {
 			setLoading(true);
 			try {
-				const res = await fetch("https://chat-app-backend-two-liard.vercel.app/api/users",{
+				const res = await fetch("https://chat-app-backend-two-mocha.vercel.app/api/users",{
 					method:"GET",
 					credentials:"include",
 				});

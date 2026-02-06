@@ -15,7 +15,7 @@ export const SocketContextProvider = ({ children }) => {
 
 	useEffect(() => {
 		if (authUser) {
-			const socket = io("https://chat-app-backend-two-liard.vercel.app", {
+			const socket = io("https://chat-app-backend-two-mocha.vercel.app/", {
 				query: {
 					userId: authUser._id,
 				},
