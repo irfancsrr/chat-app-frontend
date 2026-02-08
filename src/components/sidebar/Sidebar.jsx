@@ -4,12 +4,15 @@ import SearchInput from "./SearchInput";
 
 const Sidebar = () => {
 	return (
-		<div className='border-r border-slate-500 p-4 flex flex-col'>
-			<SearchInput />
-			<div className='divider px-3'></div>
-			<Conversations />
-			<LogoutButton />
-		</div>
+<div className="border-r border-slate-500 p-4 flex flex-col w-full md:w-2/5">
+  <SearchInput />
+  <div className="divider px-3"></div>
+  <div className="flex-1 overflow-y-auto">
+    <Conversations />
+  </div>
+  <LogoutButton />
+</div>
+
 	);
 };
 export default Sidebar;
