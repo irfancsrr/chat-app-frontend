@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
+import { useAuthContext } from "../context/AuthContext";
 
 const useGetConversations = () => {
 	const [loading, setLoading] = useState(false);
 	const [conversations, setConversations] = useState([]);
-
+    const {url}=useAuthContext();
 	useEffect(() => {
 		const getConversations = async () => {
 			setLoading(true);
 			try {
-				const res = await fetch("https://chat-app-backend-two-mocha.vercel.app/api/users",{
+				const res = await fetch(`${url}/api/users`,{
 					method:"GET",
 					credentials:"include",
 				});

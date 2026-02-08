@@ -4,12 +4,12 @@ import toast from "react-hot-toast";
 
 const useLogout = () => {
 	const [loading, setLoading] = useState(false);
-	const { setAuthUser } = useAuthContext();
+	const { setAuthUser,url } = useAuthContext();
 
 	const logout = async () => {
 		setLoading(true);
 		try {
-			const res = await fetch("https://chat-app-backend-two-mocha.vercel.app/api/auth/logout", {
+			const res = await fetch(`${url}/api/auth/logout`, {
 				method: "POST",
 				headers: { "Content-Type": "application/json" },
 				credentials:'include',

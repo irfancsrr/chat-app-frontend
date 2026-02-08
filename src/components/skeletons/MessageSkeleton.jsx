@@ -16,5 +16,5 @@ const MessageSkeleton = () => {
 			</div>
 		</>
 	);
-};
+};	
 export default MessageSkeleton;
